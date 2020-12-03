@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+
+
+    <!-- Title Page-->
+    <title>Burn-Out</title>
+
+    <!-- Icons font CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='main.css')}}"
+    rel="stylesheet" media="all">
+</head>
+
+<body>
+
+
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w600">
+        <!-- <img src= "destress-monday-header-workplace-burnout.png" width = 100% /> -->
+        <img src="{{ url_for('static', filename = 'destress-monday-header-workplace-burnout.png') }}" width = 100%>
+            <div class="card card-1">
+                <div>
+                </div>
+                <div class="card-body">
+
+                    <form class="form" method="POST">
+                                <div class="jumbotron">
+                                <div class="form-group gender" >
+                                    <h6>Gender</h6>
+                                        <select class="form-control" name="parameter 1" id="parameter_1">
+                                        <option disabled="disabled" selected="selected">Select your gender</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        </select>
+                                    </div>
+                                   
+                                        <div class="form-group wfh" >
+                                            <h6>Work From Home</h6>
+                                            <select class="form-control" name="parameter 3" id="parameter_3">
+                                                <option disabled="disabled" selected="selected">Do you have an appropriate WFH setup?</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+        
+                                            </select>
+                                        </div>
+                                        <div class="form-group designation">
+                                            <h6>Designation</h6>
+                                            <select class="form-control" name="parameter 4" id="parameter_4">
+                                                <option disabled="disabled" selected="selected">Select your seniority level</option>
+                                                <option>Intern</option>
+                                                <option>Junior</option>
+                                                <option>Mid Level</option>
+                                                <option>Senior</option>
+                                                <option>Senior Executive</option>
+                                                <option>C-Suite</option>
+                                            </select>
+                                        </div>
+                                        <div class="resource">
+                                        <h6>Resource</h6>
+                                        <input class="form-control" placeholder="Input hours of intence work a day" type="text" name="parameter 5" id="parameter_5">
+                                        </div>
+                                        <span style="display:inline-block;margin-left:180px"></span>
+                                        <h6>Mental Fatigue - 1..10</h6>
+                                        <input class="form-control" placeholder="How are you feeling this week?" type="text" name="parameter 6" id="parameter_6">
+                                        
+                                        </div>
+                                        
+                                        
+                                        
+                                        <div class="p-t-20">
+                                            <button value="Run Model" class="btn btn-primary" type="submit">Run </button>
+                                
+                                        </div>
+                                        
+                                        
+                                   
+                                    </form>
+                                    
+            
+                                         <span style="display:inline-block;margin-left:180px"></span>
+                                        <h5> Burn-out Rate : {{rate}} </h5>
+                                        <h5> Status : {{prediction}} </h5>
+                                   
+                                     </div>
+                                        <script src="js/scripts.js">
+                                         
+                                    </script>
+                                    </div>
+                            </div>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
